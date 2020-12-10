@@ -1,33 +1,70 @@
-<div class = "jumbotron bg-primary">
-    <h1 style="color: white">Eat-Da-Burger!</h1>
-    <img class="burgerPic" height="100" width="100" src="#"></img>
-</div>
+<div class="container">
 
-<div class = "container bg-warning">
-    <div class = "row">
-        <div class = "col-md-4">
-            <label>Enter Burger Name</label>
-            <input id = "inputBurger" type = "text">
-            <button id = "addBurger">Add Burger</button>
-            </button>
-        </div>
-        <div id = "readyBurger" class = "col-md-4">
-            <h1>Burgers Are Ready</h1>
-            {{#each burgerData}}
-                {{#unless this.devoured}}
-                <p>{{this.burger_name}}</p>
-                <button id = {{this.id}} class = "updateBurger btn-dark">Eat It!</button>
-                {{/unless}}
-            {{/each}}
-        </div>
-        <div id = "eatenBurger" class = "col-md-4">
-            <h1>Burgers Devoured</h1>
-            {{#each burgerData}}
-                {{#if this.devoured}}
-                <p>{{this.burger_name}}</p>
-                <button id = {{this.id}} class = "deleteBurger btn-danger">Delete It!</button>
-                {{/if}}
-            {{/each}}
-        </div>
+    <div class="jumbotron">
+        <h1>My Burger </h1>
+        <p>Burger Orders for Pickup.</p>
+        <br>
+        <h2> Order Your Choice Of Burger! </h2><br>
+      
+            <form class="create-form">
+
+                <div class="input-group" style="width: 42%;">
+                    
+                    <input class="form-control" type="input" placeholder="My Burger" >
+                    <span class="input-group-addon"><button type="button" class="btn btn-info">Info</button></span>
+                </div>
+
+
+            </form>
+       
     </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="lSide"><strong>Order Your Burger</strong>
+                    <p> Press the button when ready to EAT.</p>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="btn btn-info eatB" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}">EAT</button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rSide"><strong>Burger is Ready for Pick Up</strong>
+                    <p>Remove order when done EATING</p>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class=" btn btn-info trash" id="trashbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}">TRASH</button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--endrow -->
 </div>
+<!--endcontainer -->

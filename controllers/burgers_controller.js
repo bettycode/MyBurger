@@ -1,32 +1,31 @@
-var express = require("express");
+const express = require("express");
 const burger = require("../models/burger.js");
 
 // Import the model
-var cat = require("../models/burger.js");
 
-var router = express.Router();
+const router = express.Router();
 
 
 // creat all our routes
 
 router.get("/", function(req,res) {
     burger.selectAll(function(data){
-        let sAllObject ={
+        let hbsObject ={
             burgers: data
         };
-        console.log(sAllObject);
-        res.render("index",sAllObject);
+        console.log(hbsObject);
+        res.render("index",hbsObject);
     });
 });
 
 router.post("/api/burgers", function(req, res){
+    console.log("POST Route", req.body)
     burger.insertOne([
         "burger_name","devoured"
     ],
     [
-        req.body.burger_name, 
+        req.body.name, false
 
-        req.body.devoured
 
     ],
      function(result){
@@ -57,8 +56,9 @@ router.put("/api/burgers/:id", function(req,res) {
 });
 
 
-router.deleteOne("/api/burgers/:id", function(req,res) {
+router.delete("/api/burgers/:id", function(req,res) {
     let condition = "id =" + req.params.id;
+    console.log("condition", condition);
 
     burger.deleteOne( condition, function(result){
         if (result.affectedRows == 0) {
@@ -70,6 +70,9 @@ router.deleteOne("/api/burgers/:id", function(req,res) {
     })
 });
 
+router.get("/api/burgers", function(req, res) {
+    res.render("index", burger);
+  });
 //export routes
 
 module.exports = router;
