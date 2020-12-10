@@ -1,0 +1,33 @@
+<div class = "jumbotron bg-primary">
+    <h1 style="color: white">Eat-Da-Burger!</h1>
+    <img class="burgerPic" height="100" width="100" src="#"></img>
+</div>
+
+<div class = "container bg-warning">
+    <div class = "row">
+        <div class = "col-md-4">
+            <label>Enter Burger Name</label>
+            <input id = "inputBurger" type = "text">
+            <button id = "addBurger">Add Burger</button>
+            </button>
+        </div>
+        <div id = "readyBurger" class = "col-md-4">
+            <h1>Burgers Are Ready</h1>
+            {{#each burgerData}}
+                {{#unless this.devoured}}
+                <p>{{this.burger_name}}</p>
+                <button id = {{this.id}} class = "updateBurger btn-dark">Eat It!</button>
+                {{/unless}}
+            {{/each}}
+        </div>
+        <div id = "eatenBurger" class = "col-md-4">
+            <h1>Burgers Devoured</h1>
+            {{#each burgerData}}
+                {{#if this.devoured}}
+                <p>{{this.burger_name}}</p>
+                <button id = {{this.id}} class = "deleteBurger btn-danger">Delete It!</button>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
