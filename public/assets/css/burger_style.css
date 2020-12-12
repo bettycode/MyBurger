@@ -1,0 +1,28 @@
+#lSide{
+    background:tomato;
+    padding: 5px;
+    padding-top: 10px;
+    
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#rSide{
+    background:rgba(12, 206, 12, 0.726);
+    padding: 5px;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 328px;
+  
+
+}
+
+.jumbotron{
+    background:black;
+    color:white;
+}
