@@ -1,7 +1,7 @@
 const connection = require("../config/connection.js");
 
 // ["?", "?", "?"].toString() => "?,?,?";
-function printQuestionMarks(num) {
+function printQmarks(num) {
     var arr = [];
   
     for (var i = 0; i < num; i++) {
@@ -35,25 +35,26 @@ function printQuestionMarks(num) {
 
 const orm = {
 
-    selectAll: function (table ,cb){
-        let queryS = "SELECT * FROM " + table +";";
-        connection.query(queryS, function(err, result) {
+    selectAll: function (table, cb){
+        var  queryS = "SELECT * FROM " + table + ";";
+
+        connection.query(queryS, function(err, res) {
             if (err) {
               throw err;
             }
-            cb(result);
+            cb(res);
           });
     },
 
     insertOne: function(table, cols, vals, cb){
-        let queryS = "INSERT  INTO" + table;
+        var queryS = "INSERT  INTO" +  table
 
-        queryS += "(";
-        queryS += cols.toString();
-        queryS += ")";
-        queryS +="VALUES (";
-        queryS += printQuestionMarks(vals.length);
-        queryS += ")";
+        queryS += "("
+        queryS += cols.toString()
+        queryS += ")"
+        queryS +="VALUES ("
+        queryS += printQmarks(vals.length)
+        queryS += ")"
 
         console.log(queryS);
 
@@ -66,13 +67,13 @@ const orm = {
 
     },
 
-    updateOne: function(table, objcolvals, condition, cd){
-        let queryS = "UPDATE" + table;
+    updateOne: function(table, objcolvals, condition, cb){
+        let queryS = "UPDATE" + table
 
-        queryS += "SET";
-        queryS +=  objToSql(objcolvals);
-        queryS +=  "WHERE";
-        queryS += condition;
+        queryS += "SET"
+        queryS +=  objToSql(objcolvals)
+        queryS +=  "WHERE"
+        queryS += condition
 
         console.log(queryS);
 
@@ -85,10 +86,10 @@ const orm = {
     },
 
     deleteOne: function(table, condition, cb){
-        let queryS = "DELETE FROM" + table;
+        let queryS = "DELETE FROM" + table
 
-        queryS += "WHERE";
-        queryS += condition;
+        queryS += "WHERE"
+        queryS += condition
 
         connection.query(queryS, function(err, result) {
             if (err) {

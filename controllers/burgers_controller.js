@@ -21,20 +21,14 @@ router.get("/", function(req,res) {
 router.post("/api/burgers", function(req, res){
     console.log("POST Route", req.body)
     burger.insertOne([
-        "burger_name","devoured"
-    ],
+        "burger_name","devoured"],
     [
-        req.body.name, false
-
-
+        req.body.burger_name, req.body.devoured
     ],
+
      function(result){
         //send back new ID
-        res.json(
-            {
-                id:result.insertId
-            }
-        );
+        res.json({id:result.insertId});
     })
 });
 
