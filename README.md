@@ -1,6 +1,6 @@
 # MyBurger
 
-[![GitHub](https://img.shields.io/github/license/bettycode/MyBurger?logo=MIT&style=plastic)](https://github.com/BB/MyBurger)
+[![GitHub](https://img.shields.io/github/license/bettycode/Note-Taker?logo=MIT&style=plastic)](https://github.com/BB/MyBurger)
 
 
 
