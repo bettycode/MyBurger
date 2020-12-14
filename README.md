@@ -1,8 +1,9 @@
 # MyBurger
 
+<img alt="GitHub" src="https://img.shields.io/github/license/BB/MyBurger?style=plastic">
 
 
-[![GitHub](https://img.shields.io/github/license/bettycode/MyBurger?logo=MIT&style=plastic)](https://github.com/BB/MyBurger)
+
 
 # Description
 
