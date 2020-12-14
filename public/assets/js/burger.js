@@ -17,7 +17,7 @@ $(function(){
         })
     })
 
-    $("#eatbtn").on("click",function(event){
+    $(".eatB").on("click",function(event){
         event.preventDefault();
 
         var id = $(this).data("id");
