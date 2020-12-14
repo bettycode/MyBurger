@@ -29,6 +29,12 @@ Burger logger with MySQL, Node, Express, Handlebars and a homemade ORM .
 
 Dependencies must be installed to run the application properly: 
 
+* express
+
+* express-handlebars
+
+* mysql
+
 
 # Usage
 
