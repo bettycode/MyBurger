@@ -12,7 +12,7 @@ Burger logger App with MySQL, Node, Express, Handlebars and a homemade ORM .
 
 #
 
-(/assets/img/burgerApp.png)
+![img](public/assets/img/burgerApp.png)
 
 # Table of Contents
 
