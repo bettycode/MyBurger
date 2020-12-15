@@ -4,7 +4,7 @@
 
 # Deployed link:-
 
-(https://git.heroku.com/immense-plateau-32951.git)
+(https://immense-plateau-32951.herokuapp.com/)
 
 # Description
 
