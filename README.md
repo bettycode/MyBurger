@@ -4,7 +4,7 @@
 
 # Deployed link:-
 
-[!Link](https://git.heroku.com/immense-plateau-32951.git)
+(https://immense-plateau-32951.herokuapp.com/)
 
 # Description
 
@@ -61,7 +61,7 @@ This project is license under the **MIT** license.
 
 # Contributing
 
-​Contributors: Bethlehem Balcha
+* Contributors: Bethlehem Balcha
 
 # Tests
 
