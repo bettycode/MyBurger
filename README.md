@@ -2,9 +2,9 @@
 
 [![GitHub](https://img.shields.io/github/license/bettycode/Note-Taker?logo=MIT&style=plastic)](https://github.com/BB/MyBurger)
 
+# Deployed link:-
 
-
-
+[!Link](https://git.heroku.com/immense-plateau-32951.git)
 
 # Description
 
