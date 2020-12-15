@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="container">
+    
         <div class="jumbotron">
             <div class="row">
                 <div class="col-sm-5">
@@ -13,7 +13,7 @@
                         <div class="input-group">
                             
                             <input class="form-control" type="input" placeholder="My Burger" id="nb" >
-                            <span class="input-group-addon"><button type="submit" class="btn btn-info">Buy</button></span>
+                            <span class="input-group-addon"><button type="submit" class="btn  btn-outline-dark">BUY</button></span>
                         </div>
 
 
@@ -29,7 +29,7 @@
             </div> 
         </div>        
 
-    </div>      
+        
 </div>
 <div class="container">
     <div class="row">
@@ -45,7 +45,7 @@
                         {{#unless devoured}}
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                        <button type="button" class="btn btn-info eatB" id="eatbtn" data-id="{{this.id}}"
+                        <button type="button" class="btn btn-outline-success eatB" id="eatbtn" data-id="{{this.id}}"
                             data-newDevoured="{{devour}}">EAT</button>
                         <hr>
                         {{/unless}}
@@ -65,7 +65,7 @@
                         {{#each burgers}}
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                        <button type="button" class=" btn btn-info trash" id="dbtn" data-id="{{this.id}}"
+                        <button type="button" class=" btn btn-outline-danger trash" id="dbtn" data-id="{{this.id}}"
                             data-newDevoured="{{devour}}">TRASH</button>
                         <hr>
                         {{/if}}

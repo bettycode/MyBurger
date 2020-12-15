@@ -24,12 +24,15 @@ img{
 
 .jumbotron{
   
-    background:black;
-    color:white;
+    background: linear-gradient(45deg, rgb(255, 230, 0), transparent);
+    
     margin-bottom: 6%;
 }
 div.container-fluid{
     padding-left: 0;
     padding-right: 0;
     background:black;
+}
+.btn-info{
+    background: rgb(0 0 0 / 28%);
 }
