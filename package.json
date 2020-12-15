@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,11 +23,5 @@
   "bugs": {
     "url": "https://github.com/bettycode/MyBurger/issues"
   },
-  "homepage": "https://github.com/bettycode/MyBurger#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.6"
-  }
+  "homepage": "https://github.com/bettycode/MyBurger#readme"
 }
