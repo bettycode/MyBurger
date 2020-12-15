@@ -8,7 +8,7 @@
 
 # Description
 
-Burger logger with MySQL, Node, Express, Handlebars and a homemade ORM .
+Burger logger App with MySQL, Node, Express, Handlebars and a homemade ORM .
 
 
 # Table of Contents
@@ -39,7 +39,7 @@ Dependencies must be installed to run the application properly:
 
 # Usage
 
-* MyBurger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+* **MyBurger!** is a restaurant app that lets users input the names of burgers they'd like to eat.
 
 
 * Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
@@ -54,7 +54,7 @@ Dependencies must be installed to run the application properly:
 
 # License
 
-This project is license under the MIT license.
+This project is license under the **MIT** license.
 
 # Contributing
 
